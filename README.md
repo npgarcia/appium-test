@@ -9,3 +9,6 @@ Instructions
 
 2- In the next view check that the username in the TextView is the text introduced in the username field
 
+
+**Important: You need to create a fork of this repository to solve the challenge**
+
