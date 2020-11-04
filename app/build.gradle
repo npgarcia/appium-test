@@ -35,12 +35,6 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
     implementation 'androidx.navigation:navigation-ui:2.0.0'
-    implementation ('org.seleniumhq.selenium:selenium-java:3.141.59') {
-    }
-    implementation ('io.appium:java-client:7.3.0') {
-        exclude group: 'commons-logging', module: 'commons-logging'
-        exclude group: 'org.seleniumhq.selenium', module: 'selenium-api'
-    }
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
