@@ -15,6 +15,9 @@ public class TestLogin {
     private LogInActivityObject logInActivityObject;
     private AndroidDriver<MobileElement> driver;
 
+    private String name = "nadia@me.com";
+    private String password = "123456";
+
     @Before
     public void setUp() {
         DesiredCapabilities capability = new DesiredCapabilities();
@@ -38,8 +41,7 @@ public class TestLogin {
 
     @Test
     public void sameName() {
-        String name = "nadia@me.com";
-        logInActivityObject.logIn(name, "123456");
+        logInActivityObject.logIn(name, password);
 
         MainActivityObject mainActivity = new MainActivityObject(driver);
         Assert.assertEquals(name,mainActivity.getUserName());
@@ -47,9 +49,7 @@ public class TestLogin {
 
     @Test
     public void inactiveButton() {
-        String password = "123456";
-
-        logInActivityObject.typeInUser("nadia@me.com");
+        logInActivityObject.typeInUser(name);
 
         for (int i = 0; i < password.length()-1; i++) {
             logInActivityObject.typeInPassword(password.substring(0, i+1));
